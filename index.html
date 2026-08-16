@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Комунальні Послуги</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Внесення показників</h2>
+    <div class="form-group">
+      <label>Світло (День) - кВт·год:</label>
+      <input type="number" id="lightDay" min="0" step="1" placeholder="Поточний показник">
+    </div>
+    <div class="form-group">
+      <label>Світло (Ніч) - кВт·год:</label>
+      <input type="number" id="lightNight" min="0" step="1" placeholder="Поточний показник">
+    </div>
+    <div class="form-group">
+      <label>Газ - м³:</label>
+      <input type="number" id="gas" min="0" step="1" placeholder="Поточний показник">
+    </div>
+    
+    <button id="calculateBtn">Розрахувати та Зберегти</button>
+
+    <div id="resultBox" class="result hidden"></div>
+
+    <h2>Історія розрахунків</h2>
+    <div class="table-container">
+      <table id="historyTable">
+        <thead>
+          <tr>
+            <th>Дата</th>
+            <th>Світло (Д/Н)</th>
+            <th>Газ</th>
+            <th>Сума (₴)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Дані генеруються через JS -->
+        </tbody>
+      </table>
+    </div>
+    <button id="clearBtn" class="danger-btn">Очистити історію</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
