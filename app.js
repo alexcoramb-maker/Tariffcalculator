@@ -127,4 +127,4 @@ function clearInputs() {
   document.getElementById('lightDay').value = '';
   document.getElementById('lightNight').value = '';
   document.getElementById('gas').value = '';
-}
+                                                       }
